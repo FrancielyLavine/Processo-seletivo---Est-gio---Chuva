@@ -11,9 +11,21 @@ html {
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
 
+    display: flex;
+
+}
+
+.conteudoPrincipal {
+    width: calc(100vw - 22rem);
+    margin-left: auto;
+
+    /* padding: 0 4.5rem; */
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
 .centralizar {
@@ -24,7 +36,9 @@ body {
     height: 100vh;
     width: 22rem;
 
-    position: fixed;
+    position: sticky;
+    top: 0;
+    bottom: 0;
 
     display: flex;
     flex-direction: column;
@@ -91,10 +105,7 @@ body {
 
 .cabecalho {
     height: 6.8rem;
-    width: calc(100vw - 22rem);
 
-    position: sticky;
-    left: 22rem;
 
     display: flex;
     align-items: center;
@@ -198,31 +209,34 @@ body {
     border-radius: 50%;
 }
 
-.centralizarConteudo {
-    position: relative;
-    top: 2rem;
-    left: 26.3rem;
+.conteudoCentralDoSite {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+}
 
+.secaoDoVideo {
     display: flex;
 }
 
-.videoDeApresentacao {
-    margin-right: 3.1rem;
-}
+.secaoDoVideo h3 {
+    width: 78.5rem;
 
-.videoDeApresentacao h3 {
-    width: 70.6rem;
+    margin-top: 2rem;
+    margin-right: 17rem;
 
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 2.5rem;
 
     color: #ED7839;
 }
 
+
 .imagemDoVideo {
     margin-top: 1.9rem;
+    margin-bottom: 3rem;
+
     background-image: url('./assets/dewey\ 1.png');
     background-repeat: no-repeat;
 }
@@ -281,6 +295,7 @@ body {
 }
 
 .botoes {
+    margin-top: 2rem;
     margin-bottom: 0.6rem;
 
     display: flex;
@@ -405,26 +420,20 @@ body {
     color: #5C5C5C;
 }
 
-.parteDeBaixo {
-    width: 105.8rem;
-
-    position: relative;
-    top: 3rem;
-    left: 26.3rem;
-}
 
 .temaResumo {
-    width: 105.9rem;
-
     border: 0.2rem solid #ECECEC;
-    border-radius: 3px;
+    border-radius: 0.3rem;
 
     cursor: pointer;
 }
 
 .temaResumoh2 {
-    width: 104.5rem;
-    padding: 1rem 0rem 1rem 1.5rem;
+    height: 4.5rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
 
     background: #FDF1EB;
     border-bottom: 0.2rem solid #ECECEC;
@@ -438,21 +447,39 @@ body {
     color: #4E4E4E;
 }
 
-.resumido {
-    font-size: 30rem;
-}
 
-.resumido b{
+
+.temaResumo button {
+    position: relative;
+    right: 10rem;
+    bottom: 0;
+
+    all: unset;
     font-family: 'Quicksand', sans-serif;
     color: #ED7839;
 
-    text-decoration: none;
-
+    text-decoration: none
 }
 
 .temaResumoTexto {
+    position: relative;
+
+    display: flex;
+    justify-content: right;
+
+    text-overflow: ellipsis;
     padding: 1.5rem 1.5rem 0rem;
 }
+
+.elipse {
+    overflow: hidden;
+    white-space: initial;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
 
 .temaResumoTexto p {
     margin-bottom: 3rem;
@@ -465,9 +492,8 @@ body {
 }
 
 .discussoes {
-    width: 105.9rem;
-
     margin-top: 3rem;
+    padding-bottom: 1.5rem;
 
     display: flex;
     flex-direction: column;
@@ -479,7 +505,7 @@ body {
 
 .discussoesh2 {
     height: 4.5rem;
-    width: 105.9rem;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -505,6 +531,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .quadroDeDiscussoes h4 {
@@ -542,6 +569,9 @@ body {
     height: 3.2rem;
     width: 13.3rem;
 
+    position: relative;
+    top: 2.5rem;
+
     margin-top: 1.4rem;
 
     display: flex;
@@ -552,6 +582,7 @@ body {
     box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12), 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
     border-radius: 0.4rem;
     border-style: none;
+
 
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
@@ -567,11 +598,11 @@ body {
 }
 
 .criarTopico {
-    width: 102.5rem;
-
+    margin-top: 1.5rem;
+    
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
 }
 
 .criarTopico p {
@@ -595,6 +626,7 @@ body {
 }
 
 .criarTopico input {
+
     font-family: 'Quicksand', sans-serif;
     color: #4D4D4D;
 }
@@ -658,6 +690,8 @@ body {
 }
 
 .seuTopico {
+    margin-top: 1.5rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -697,6 +731,9 @@ body {
     height: 3.2rem;
     width: 23.5rem;
 
+    position: relative;
+    top: 1.7rem;
+
     background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
     box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12), 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
     border-radius: 0.4rem;
@@ -712,7 +749,12 @@ body {
 
 }
 
-.comentarioEnviado{
+.paraABorda {
+    padding-top: 2rem;
+    border-top: 0.1rem solid #E7E7E7;
+}
+
+.comentarioEnviado {
     height: 16.8rem;
     width: 102.6rem;
 
@@ -725,16 +767,15 @@ body {
 
     background-image: url('./assets/Group\ 82.png');
     border: 0.1rem solid rgba(231, 231, 231, 1);
-    /* background: rgba(221, 221, 221, 1); */
     border-radius: 0.4rem;
 }
 
-.comentarioEnviado img{
+.comentarioEnviado img {
     margin-top: 3.5rem;
     margin-bottom: 1rem;
 }
 
-.comentarioEnviado h4{
+.comentarioEnviado h4 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 1.6rem;
@@ -742,6 +783,11 @@ body {
     color: #707070;
 }
 
+.comentarios {
+    margin: 1rem 0;
+    padding-top: 2rem;
+    border-top: 0.1rem solid #E7E7E7;
+}
 
 .comentario {
     height: 13rem;
@@ -775,9 +821,7 @@ body {
 }
 
 .comentario p {
-    width: 98rem;
-
-    margin-top: 1rem;
+    margin-right: 1rem;
 
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
@@ -787,17 +831,19 @@ body {
 }
 
 .interacao {
-    width: 20.5rem;
+    width: 20rem;
 
     margin-top: 1.4rem;
 
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .interacao button {
     margin-right: 1.5rem;
+
+    display: flex;
+    align-items: center;
 
     border-style: none;
     background-color: transparent;
@@ -837,9 +883,7 @@ body {
 }
 
 .comentario2 p {
-    width: 98rem;
-
-    margin-top: 1rem;
+    margin-right: 1rem;
 
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
